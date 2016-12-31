@@ -29,7 +29,7 @@ end
 
    def update
 
-    if @group = Group.update(group_params)
+    if @group.update(group_params)
      redirect_to groups_path, notice: "Update Success"
 else
   render :edit
@@ -39,7 +39,7 @@ end
    def destroy
 
      @group.destroy
-     
+
      redirect_to groups_path, alert: "Group deleted"
 
    end
